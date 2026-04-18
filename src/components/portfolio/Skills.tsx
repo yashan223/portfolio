@@ -61,11 +61,8 @@ export function Skills() {
                   padding: "1px",
                 }}
               />
-              <div
-                className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg"
-                style={{ background: "var(--gradient-primary)" }}
-              >
-                <cat.icon className="h-5 w-5 text-white" />
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/25 bg-white/10">
+                <cat.icon className="h-5 w-5 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.45)]" />
               </div>
               <h4 className="text-lg font-semibold">{cat.title}</h4>
               <div className="mt-4 flex flex-wrap gap-2">
