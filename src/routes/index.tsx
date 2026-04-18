@@ -11,13 +11,13 @@ import { Footer } from "@/components/portfolio/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Yashan Perera — Aspiring DevOps Engineer" },
+      { title: "Yashan Perera -Aspiring DevOps Engineer" },
       {
         name: "description",
         content:
-          "Portfolio of Yashan Perera — student and aspiring DevOps engineer. Projects pulled live from GitHub.",
+          "Portfolio of Yashan Perera — student and aspiring DevOps engineer.",
       },
-      { property: "og:title", content: "Yashan Perera — Aspiring DevOps Engineer" },
+      { property: "og:title", content: "Yashan Perera -Aspiring DevOps Engineer" },
       {
         property: "og:description",
         content: "Student on the path to DevOps. Projects, skills, and learning journey.",

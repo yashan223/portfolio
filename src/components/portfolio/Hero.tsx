@@ -7,6 +7,7 @@ export function Hero() {
 
   return (
     <section
+      id="home"
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-24"
       style={{ backgroundImage: "var(--gradient-hero)" }}
     >
@@ -52,7 +53,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl lg:mx-0"
           >
-            Student on the path to becoming a DevOps Engineer — learning Linux,
+            Student on the path to becoming a DevOps Engineer learning Linux,
             automation, and cloud infrastructure while building real projects along the way.
           </motion.p>
 

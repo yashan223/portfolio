@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Twitter, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const EMAIL = "yashan223@gmail.com";
+const EMAIL = "yashanperera223@icloud.com";
 
 const socials = [
   {
@@ -43,7 +43,7 @@ export function Contact() {
             Let's get in touch
           </h3>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Open to internships, junior DevOps roles, and collaboration.
+            Open to internships and collaboration.
             The fastest way to reach me is by email.
           </p>
         </motion.div>

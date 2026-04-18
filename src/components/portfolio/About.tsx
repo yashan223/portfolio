@@ -24,7 +24,7 @@ export function About() {
             I'm a student on a mission to become a DevOps Engineer. I love
             tinkering with Linux, automating boring tasks, and learning how
             modern infrastructure is built and deployed. Every project here is
-            a step in that journey — building, breaking, and learning along the way.
+            a step in that journey building, breaking, and learning along the way.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
