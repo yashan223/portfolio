@@ -83,7 +83,7 @@ export function Contact() {
               </a>
               <div className="mt-6">
                 <Button asChild size="lg" className="rounded-full bg-primary/80 hover:bg-primary/70">
-                  <a href={`mailto:${EMAIL}`}>
+                  <a href={`mailto:${EMAIL}`} className="text-white">
                     <Mail className="mr-1 h-4 w-4 text-white" />
                     Send me an email
                   </a>
