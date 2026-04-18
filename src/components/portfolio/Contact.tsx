@@ -82,7 +82,7 @@ export function Contact() {
                 <ArrowUpRight className="h-5 w-5 shrink-0 text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <div className="mt-6">
-                <Button asChild size="lg" className="rounded-full">
+                <Button asChild size="lg" className="rounded-full bg-primary/80 hover:bg-primary/70">
                   <a href={`mailto:${EMAIL}`}>
                     <Mail className="mr-1 h-4 w-4 text-white" />
                     Send me an email

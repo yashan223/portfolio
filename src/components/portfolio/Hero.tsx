@@ -63,7 +63,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
           >
-            <Button asChild size="lg" className="group rounded-full">
+            <Button asChild size="lg" className="group rounded-full bg-primary/80 hover:bg-primary/70">
               <a href="#projects">
                 View Projects
                 <ArrowRight className="ml-1 h-4 w-4 text-white transition-transform group-hover:translate-x-0.5" />
