@@ -63,13 +63,22 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
           >
-            <Button asChild size="lg" className="group rounded-full bg-primary/80 hover:bg-primary/70">
+            <Button
+              asChild
+              size="lg"
+              className="group rounded-full bg-primary/65 text-white hover:bg-primary/55"
+            >
               <a href="#projects">
                 View Projects
                 <ArrowRight className="ml-1 h-4 w-4 text-white transition-transform group-hover:translate-x-0.5" />
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="rounded-full">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-full border-primary/40 bg-primary/20 text-white hover:bg-primary/30 hover:text-white"
+            >
               <a href="https://github.com/yashan223" target="_blank" rel="noreferrer">
                 <Github className="mr-1 h-4 w-4 text-white" />
                 GitHub Profile
