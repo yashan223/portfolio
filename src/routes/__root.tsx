@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
+import portfolioIcon from "../portfolio.png?url";
 
 function NotFoundComponent() {
   return (
@@ -47,6 +48,11 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: portfolioIcon,
+      },
       {
         rel: "stylesheet",
         href: appCss,
