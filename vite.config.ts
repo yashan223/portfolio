@@ -13,4 +13,10 @@ export default defineConfig(({ command }) => ({
     tailwindcss(),
     command === "build" ? cloudflare() : null,
   ],
+  server: {
+    cors: true,
+  },
+  preview: {
+    cors: true,
+  },
 }));
