@@ -9,6 +9,7 @@ html {
 }
 html, body {
   background-color: var(--color-background);
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {
