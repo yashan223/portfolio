@@ -149,7 +149,7 @@ export function Projects() {
             className="flex items-center gap-3 rounded-2xl border border-destructive/30 p-6 text-sm"
             style={{ backgroundColor: "oklch(0.65 0.22 25 / 0.08)" }}
           >
-            <AlertCircle className="h-5 w-5 text-destructive" />
+            <AlertCircle className="h-5 w-5 text-white" />
             <div>
               <p className="font-medium text-foreground">Couldn't load projects</p>
               <p className="text-muted-foreground">{error}</p>
@@ -218,12 +218,12 @@ export function Projects() {
 
                 <div className="relative flex items-start justify-between gap-3">
                   <div className="flex items-center gap-2">
-                    <Github className="h-4 w-4 text-muted-foreground" />
+                    <Github className="h-4 w-4 text-white" />
                     <h4 className="font-semibold tracking-tight transition-colors group-hover:text-primary">
                       {repo.name}
                     </h4>
                   </div>
-                  <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                  <ExternalLink className="h-4 w-4 text-white opacity-0 transition-opacity group-hover:opacity-100" />
                 </div>
 
                 <p className="relative mt-3 line-clamp-3 flex-1 text-sm text-muted-foreground">
@@ -241,11 +241,11 @@ export function Projects() {
                     </span>
                   )}
                   <span className="flex items-center gap-1">
-                    <Star className="h-3.5 w-3.5" />
+                    <Star className="h-3.5 w-3.5 text-white" />
                     {repo.stargazers_count}
                   </span>
                   <span className="flex items-center gap-1">
-                    <GitFork className="h-3.5 w-3.5" />
+                    <GitFork className="h-3.5 w-3.5 text-white" />
                     {repo.forks_count}
                   </span>
                 </div>

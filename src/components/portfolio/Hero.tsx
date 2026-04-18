@@ -34,7 +34,7 @@ export function Hero() {
               borderColor: "var(--glass-border)",
             }}
           >
-            <Sparkles className="h-3 w-3 text-primary" />
+            <Sparkles className="h-3 w-3 text-white" />
             <span className="text-muted-foreground">Student · Aspiring DevOps Engineer</span>
           </motion.div>
 
@@ -66,12 +66,12 @@ export function Hero() {
             <Button asChild size="lg" className="group rounded-full">
               <a href="#projects">
                 View Projects
-                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="ml-1 h-4 w-4 text-white transition-transform group-hover:translate-x-0.5" />
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full">
               <a href="https://github.com/yashan223" target="_blank" rel="noreferrer">
-                <Github className="mr-1 h-4 w-4" />
+                <Github className="mr-1 h-4 w-4 text-white" />
                 GitHub Profile
               </a>
             </Button>

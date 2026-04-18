@@ -27,7 +27,7 @@ const socials = [
 
 export function Contact() {
   return (
-    <section id="contact" className="relative px-4 py-24">
+    <section id="contact" className="relative scroll-mt-28 px-4 py-24">
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,17 +74,17 @@ export function Contact() {
               </div>
               <a
                 href={`mailto:${EMAIL}`}
-                className="group inline-flex items-center gap-2 text-2xl font-semibold tracking-tight transition-colors hover:text-primary sm:text-3xl"
+                className="group flex max-w-full items-start gap-2 text-lg font-semibold tracking-tight transition-colors hover:text-primary sm:items-center sm:text-3xl"
               >
-                <span className="text-white">
+                <span className="break-all leading-tight text-white">
                   {EMAIL}
                 </span>
-                <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
+                <ArrowUpRight className="h-5 w-5 shrink-0 text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <div className="mt-6">
                 <Button asChild size="lg" className="rounded-full">
                   <a href={`mailto:${EMAIL}`}>
-                    <Mail className="mr-1 h-4 w-4" />
+                    <Mail className="mr-1 h-4 w-4 text-white" />
                     Send me an email
                   </a>
                 </Button>
@@ -107,7 +107,7 @@ export function Contact() {
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04]">
-                      <s.icon className="h-4 w-4 text-foreground" />
+                      <s.icon className="h-4 w-4 text-white" />
                     </div>
                     <div>
                       <div className="text-sm font-medium">{s.label}</div>
@@ -116,7 +116,7 @@ export function Contact() {
                       </div>
                     </div>
                   </div>
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
+                  <ArrowUpRight className="h-4 w-4 text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </motion.a>
               ))}
             </div>

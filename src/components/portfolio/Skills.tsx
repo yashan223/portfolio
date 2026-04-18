@@ -65,7 +65,7 @@ export function Skills() {
                 className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg"
                 style={{ background: "var(--gradient-primary)" }}
               >
-                <cat.icon className="h-5 w-5 text-primary-foreground" />
+                <cat.icon className="h-5 w-5 text-white" />
               </div>
               <h4 className="text-lg font-semibold">{cat.title}</h4>
               <div className="mt-4 flex flex-wrap gap-2">
