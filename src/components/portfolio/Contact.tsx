@@ -76,10 +76,7 @@ export function Contact() {
                 href={`mailto:${EMAIL}`}
                 className="group inline-flex items-center gap-2 text-2xl font-semibold tracking-tight transition-colors hover:text-primary sm:text-3xl"
               >
-                <span
-                  className="bg-clip-text text-transparent"
-                  style={{ backgroundImage: "var(--gradient-text)" }}
-                >
+                <span className="text-white">
                   {EMAIL}
                 </span>
                 <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
