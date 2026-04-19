@@ -6,7 +6,7 @@
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
-  scrollbar-gutter: stable;
+  scrollbar-gutter: stable both-edges;
 }
 html, body {
   background-color: var(--color-background);
@@ -129,5 +129,11 @@ html, body {
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+
+  /* Keep layout stable when Radix/RemoveScroll toggles body scroll lock. */
+  body[data-scroll-locked] {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
   }
 }
