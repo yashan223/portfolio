@@ -49,7 +49,7 @@ export function Projects() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [language, setLanguage] = useState<string>("all");
-  const [sort, setSort] = useState<SortKey>("stars");
+  const [sort, setSort] = useState<SortKey>("latest");
 
   useEffect(() => {
     const ctrl = new AbortController();
@@ -137,8 +137,8 @@ export function Projects() {
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="stars">Most stars</SelectItem>
                 <SelectItem value="latest">Recently updated</SelectItem>
+                <SelectItem value="stars">Most stars</SelectItem>
               </SelectContent>
             </Select>
           </div>
