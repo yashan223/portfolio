@@ -72,11 +72,12 @@ export function PolygonalMesh() {
     };
 
     const isInPhotoArea = (x: number, y: number) => {
-      const photoAreaStartX = canvas.width * 0.6;
-      const photoAreaStartY = canvas.height * 0.15;
-      const photoAreaEndY = canvas.height * 0.85;
+      const photoAreaStartX = canvas.width * 0.65;
+      const photoAreaEndX = canvas.width * 0.98;
+      const photoAreaStartY = canvas.height * 0.25;
+      const photoAreaEndY = canvas.height * 0.75;
 
-      return x > photoAreaStartX && y > photoAreaStartY && y < photoAreaEndY;
+      return x > photoAreaStartX && x < photoAreaEndX && y > photoAreaStartY && y < photoAreaEndY;
     };
 
     const animate = () => {
