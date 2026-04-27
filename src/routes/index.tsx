@@ -5,7 +5,6 @@ import { About } from "@/components/portfolio/About";
 import { Projects } from "@/components/portfolio/Projects";
 import { Skills } from "@/components/portfolio/Skills";
 import { Contact } from "@/components/portfolio/Contact";
-import { MouseGlow } from "@/components/portfolio/MouseGlow";
 import { Footer } from "@/components/portfolio/Footer";
 
 export const Route = createFileRoute("/")({
@@ -30,7 +29,6 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background text-foreground antialiased">
-      <MouseGlow />
       <div className="relative z-10">
         <Navbar />
         <main>

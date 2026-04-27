@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PolygonalMesh } from "./PolygonalMesh";
 
 export function Hero() {
   const profilePhotoUrl = "https://avatars.githubusercontent.com/yashan223?size=640";
@@ -11,6 +12,9 @@ export function Hero() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-24"
       style={{ backgroundImage: "var(--gradient-hero)" }}
     >
+      {/* Polygonal mesh background effect */}
+      <PolygonalMesh />
+
       {/* Grid pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
