@@ -14,7 +14,6 @@ export function PolygonalMesh() {
   const pointsRef = useRef<Point[]>([]);
   const animationRef = useRef<number | null>(null);
   const timeRef = useRef(0);
-  const mouseRef = useRef({ x: 0, y: 0, active: false });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -66,22 +65,6 @@ export function PolygonalMesh() {
       resizeObserver.observe(canvas.parentElement);
     }
 
-    const onMouseMove = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      mouseRef.current = {
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-        active: true,
-      };
-    };
-
-    const onMouseLeave = () => {
-      mouseRef.current.active = false;
-    };
-
-    canvas.addEventListener("mousemove", onMouseMove);
-    canvas.addEventListener("mouseleave", onMouseLeave);
-
     const getDistance = (p1: Point, p2: Point) => {
       const dx = p1.x - p2.x;
       const dy = p1.y - p2.y;
@@ -108,40 +91,14 @@ export function PolygonalMesh() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const points = pointsRef.current;
-      const mouse = mouseRef.current;
 
       points.forEach((p) => {
         const angle = time * 0.005 + (p.origX * p.origY) * 0.0001;
         const waveX = Math.sin(angle + p.origX * 0.01) * 20;
         const waveY = Math.cos(angle + p.origY * 0.01) * 20;
 
-        let targetX = p.origX + waveX;
-        let targetY = p.origY + waveY;
-
-        if (mouse.active) {
-          const distToMouse = getDistance({ x: targetX, y: targetY, origX: 0, origY: 0, vx: 0, vy: 0 }, { x: mouse.x, y: mouse.y, origX: 0, origY: 0, vx: 0, vy: 0 });
-
-          if (distToMouse < 150) {
-            const force = (1 - distToMouse / 150) * 30;
-            const dx = targetX - mouse.x;
-            const dy = targetY - mouse.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist > 0) {
-              targetX += (dx / dist) * force;
-              targetY += (dy / dist) * force;
-            }
-          }
-        }
-
-        p.vx += (targetX - p.x) * 0.1;
-        p.vy += (targetY - p.y) * 0.1;
-
-        p.vx *= 0.85;
-        p.vy *= 0.85;
-
-        p.x += p.vx;
-        p.y += p.vy;
+        p.x = p.origX + waveX;
+        p.y = p.origY + waveY;
       });
 
       const connectionDistance = 160;
@@ -192,8 +149,6 @@ export function PolygonalMesh() {
 
     return () => {
       resizeObserver.disconnect();
-      canvas.removeEventListener("mousemove", onMouseMove);
-      canvas.removeEventListener("mouseleave", onMouseLeave);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, []);
