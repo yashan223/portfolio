@@ -27,20 +27,6 @@ export function Hero() {
 
       <div className="relative z-20 mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="text-center lg:text-left">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs backdrop-blur-xl"
-            style={{
-              backgroundColor: "var(--glass-bg)",
-              borderColor: "var(--glass-border)",
-            }}
-          >
-            <Sparkles className="h-3 w-3 text-white" />
-            <span className="text-muted-foreground">Student · Aspiring DevOps Engineer</span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,6 +45,39 @@ export function Hero() {
             Student on the path to becoming a DevOps Engineer learning Linux,
             automation, and cloud infrastructure while building real projects along the way.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-8 flex justify-center lg:justify-start"
+          >
+            <div className="inline-flex w-full max-w-[400px] flex-col overflow-hidden rounded-md border border-green-500/20 bg-background/50 text-left font-mono text-xs shadow-lg backdrop-blur-xl sm:text-sm font-semibold">
+              <div className="flex items-center gap-1.5 border-b border-green-500/20 bg-black/60 px-3 py-1.5">
+                <div className="h-2.5 w-2.5 rounded-full bg-red-500/80"></div>
+                <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80"></div>
+                <div className="h-2.5 w-2.5 rounded-full bg-green-500/80"></div>
+                <span className="ml-2 text-[10px] text-muted-foreground">bash</span>
+              </div>
+              <div className="p-3 bg-black/80">
+                <div className="flex pb-1">
+                  <span className="mr-2 text-green-400">yashan@server</span>
+                  <span className="mr-2 text-blue-400">~</span>
+                  <span className="text-white">$</span>
+                  <span className="ml-2 text-gray-100">cat current_status.txt</span>
+                </div>
+                <div className="mt-1 text-gray-300">
+                  &gt;&nbsp;Deploying scalable infrastructure...
+                </div>
+                <div className="mt-2 flex">
+                  <span className="mr-2 text-green-400">yashan@server</span>
+                  <span className="mr-2 text-blue-400">~</span>
+                  <span className="text-white">$</span>
+                  <span className="ml-2 animate-pulse text-gray-100">_</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
