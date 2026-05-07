@@ -30,7 +30,7 @@ export function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
             className="text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl"
           >
             Yashan Perera
@@ -39,7 +39,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl lg:mx-0"
           >
             Student on the path to becoming a DevOps Engineer learning Linux,
@@ -49,7 +49,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
             className="mt-8 flex justify-center lg:justify-start"
           >
             <div className="inline-flex w-full max-w-[400px] flex-col overflow-hidden rounded-md border border-green-500/20 bg-background/50 text-left font-mono text-xs shadow-lg backdrop-blur-xl sm:text-sm font-semibold">
@@ -82,7 +82,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
           >
             <Button
@@ -112,7 +112,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.25 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:ml-auto"
         >
           <div
