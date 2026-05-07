@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, Github, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PolygonalMesh } from "./PolygonalMesh";
+import profilePhotoUrl from "../../pfp/image.jpg";
 
 export function Hero() {
-  const profilePhotoUrl = "https://avatars.githubusercontent.com/yashan223?size=640";
-
   return (
     <section
       id="home"
@@ -26,7 +25,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="relative z-20 mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
