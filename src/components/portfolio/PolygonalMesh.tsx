@@ -24,7 +24,7 @@ export function PolygonalMesh() {
 
     const initializePoints = () => {
       const points: Point[] = [];
-      const spacing = 120;
+      const spacing = 60; // Decreased spacing to add more particles
       
       const cols = Math.ceil(canvas.width / spacing) + 3;
       const rows = Math.ceil(canvas.height / spacing) + 3;
@@ -73,7 +73,7 @@ export function PolygonalMesh() {
 
     const isInPhotoArea = (x: number, y: number) => {
       const photoAreaStartX = canvas.width * 0.65;
-      const photoAreaEndX = canvas.width * 0.98;
+      const photoAreaEndX = canvas.width * 0.85;
       const photoAreaStartY = canvas.height * 0.25;
       const photoAreaEndY = canvas.height * 0.75;
 
