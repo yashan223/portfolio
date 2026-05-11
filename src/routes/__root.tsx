@@ -36,7 +36,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Portfolio of Yashan Perera — student and aspiring DevOps engineer focused on Linux, automation, and cloud.",
+          "Portfolio of Yashan Perera — student and DevOps engineer focused on Linux, automation, and cloud.",
       },
       { name: "author", content: "Yashan Perera" },
       { property: "og:title", content: "Yashan Perera — Portfolio" },
