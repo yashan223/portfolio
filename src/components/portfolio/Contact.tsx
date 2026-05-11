@@ -15,7 +15,7 @@ const socials = [
     icon: Linkedin,
     label: "LinkedIn",
     handle: "Connect with me",
-    href: "https://www.linkedin.com/in/yashan-perera-270360267/",
+    href: "https://www.linkedin.com/in/yashan-perera",
   },
   {
     icon: Twitter,
