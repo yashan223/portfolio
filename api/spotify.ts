@@ -57,7 +57,7 @@ export default async function handler(req: Request) {
             status: 200,
             headers: {
               "Content-Type": "application/json",
-              "Cache-Control": "public, s-maxage=15, stale-while-revalidate=30",
+              "Cache-Control": "no-cache, no-store, must-revalidate",
             },
           }
         );
@@ -87,7 +87,7 @@ export default async function handler(req: Request) {
             status: 200,
             headers: {
               "Content-Type": "application/json",
-              "Cache-Control": "public, s-maxage=60, stale-while-revalidate=30",
+              "Cache-Control": "no-cache, no-store, must-revalidate",
             },
           }
         );
@@ -96,7 +96,10 @@ export default async function handler(req: Request) {
 
     return new Response(JSON.stringify({ isPlaying: false }), {
       status: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+      },
     });
 
   } catch (error) {

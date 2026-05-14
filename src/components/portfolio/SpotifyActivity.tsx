@@ -17,7 +17,7 @@ export function SpotifyActivity() {
   useEffect(() => {
     const fetchSpotify = async () => {
       try {
-        const res = await fetch("/api/spotify");
+        const res = await fetch(`/api/spotify?t=${Date.now()}`, { cache: "no-store" });
         if (res.ok) {
           const json = await res.json();
           setData(json);
