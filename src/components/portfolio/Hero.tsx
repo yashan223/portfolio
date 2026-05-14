@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Github, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PolygonalMesh } from "./PolygonalMesh";
+import { SpotifyActivity } from "./SpotifyActivity";
 import profilePhotoUrl from "../../pfp/image.jpg";
 
 export function Hero() {
@@ -137,6 +138,8 @@ export function Hero() {
               referrerPolicy="no-referrer"
             />
           </div>
+          
+          <SpotifyActivity />
         </motion.div>
       </div>
     </section>
