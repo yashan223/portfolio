@@ -44,14 +44,14 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="group relative overflow-hidden rounded-2xl border p-6 transition-all duration-300 hover:border-primary/40 hover:bg-white/[0.02] hover:shadow-lg hover:shadow-primary/5"
+              whileHover={{ y: -4, transition: { type: "spring", stiffness: 500, damping: 20 } }}
+              className="group relative overflow-hidden rounded-2xl border p-6 transition-all duration-150 hover:border-primary/40 hover:bg-white/[0.02] hover:shadow-lg hover:shadow-primary/5"
               style={{
                 backgroundColor: "var(--glass-bg)",
                 borderColor: "var(--glass-border)",
               }}
             >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/25 bg-white/10 transition-colors duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/25 bg-white/10 transition-colors duration-150 group-hover:border-primary/50 group-hover:bg-primary/20">
                 <cat.icon className="h-5 w-5 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.45)]" />
               </div>
               <h4 className="text-lg font-semibold">{cat.title}</h4>
