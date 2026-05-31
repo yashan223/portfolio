@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Sparkles } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PolygonalMesh } from "./PolygonalMesh";
+import { ParticleField } from "./ParticleField";
 import { SpotifyActivity } from "./SpotifyActivity";
 import profilePhotoUrl from "../../pfp/image.jpg";
 
@@ -10,21 +10,12 @@ export function Hero() {
     <section
       id="home"
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-24"
-      style={{ backgroundImage: "var(--gradient-hero)" }}
+      style={{
+        backgroundImage:
+          "radial-gradient(ellipse 60% 40% at 50% 0%, oklch(0.78 0.16 250 / 0.08), transparent 70%)",
+      }}
     >
-      {/* Polygonal mesh background effect */}
-      <PolygonalMesh />
-
-      {/* Grid pattern */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-          maskImage: "radial-gradient(ellipse at center, black 40%, transparent 80%)",
-        }}
-      />
+      <ParticleField />
 
       <div className="relative z-20 mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="text-center lg:text-left">
