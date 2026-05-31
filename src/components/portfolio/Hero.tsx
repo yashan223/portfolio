@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ParticleField } from "./ParticleField";
 import { SpotifyActivity } from "./SpotifyActivity";
 import profilePhotoUrl from "../../pfp/image.jpg";
+
 
 export function Hero() {
   return (
@@ -15,6 +16,12 @@ export function Hero() {
           "radial-gradient(ellipse 60% 40% at 50% 0%, oklch(0.78 0.16 250 / 0.08), transparent 70%)",
       }}
     >
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="hero-aurora hero-aurora--one" />
+        <div className="hero-aurora hero-aurora--two" />
+        <div className="hero-grid" />
+      </div>
+
       <ParticleField />
 
       <div className="relative z-20 mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
@@ -93,6 +100,17 @@ export function Hero() {
               variant="outline"
               className="rounded-full border-primary/40 bg-primary/20 text-white hover:bg-primary/30 hover:text-white"
             >
+              <a href="https://www.linkedin.com/in/yashan-perera/" target="_blank" rel="noreferrer">
+                <Linkedin className="mr-1 h-4 w-4 text-white" />
+                LinkedIn Profile
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-full border-primary/40 bg-primary/20 text-white hover:bg-primary/30 hover:text-white"
+            >
               <a href="https://github.com/yashan223" target="_blank" rel="noreferrer">
                 <Github className="mr-1 h-4 w-4 text-white" />
                 GitHub Profile
@@ -107,24 +125,13 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:ml-auto"
         >
-          <div
-            className="pointer-events-none absolute -inset-4 rounded-[2.25rem] opacity-70 blur-3xl"
-            style={{
-              background:
-                "radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.4), transparent 70%)",
-            }}
-          />
-          <div
-            className="relative overflow-hidden rounded-[2rem] border p-2 backdrop-blur-xl"
-            style={{
-              backgroundColor: "var(--glass-bg)",
-              borderColor: "var(--glass-border)",
-            }}
-          >
+          <div className="hero-orbit hero-orbit--primary" />
+          <div className="hero-orbit hero-orbit--secondary" />
+          <div className="hero-frame">
             <img
               src={profilePhotoUrl}
               alt="Yashan Perera profile photo"
-              className="aspect-square w-full rounded-[1.5rem] object-cover"
+              className="aspect-square w-full object-cover"
               loading="eager"
               referrerPolicy="no-referrer"
             />

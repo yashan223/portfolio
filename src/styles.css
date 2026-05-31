@@ -136,3 +136,93 @@ html, body {
     padding-right: 0 !important;
   }
 }
+
+@layer utilities {
+  .hero-aurora {
+    position: absolute;
+    inset: -22% 0 0;
+    opacity: 0.55;
+    filter: blur(80px);
+    transform: translateZ(0);
+    animation: hero-drift 20s ease-in-out infinite;
+  }
+
+  .hero-aurora--one {
+    background: radial-gradient(circle at 20% 20%, oklch(0.78 0.16 250 / 0.42), transparent 58%);
+  }
+
+  .hero-aurora--two {
+    background: radial-gradient(circle at 80% 30%, oklch(0.72 0.18 305 / 0.36), transparent 62%);
+    animation-delay: -7s;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(transparent 70%, oklch(0.78 0.16 250 / 0.1)),
+      radial-gradient(oklch(1 0 0 / 0.1) 1px, transparent 1px);
+    background-size: 100% 100%, 28px 28px;
+    opacity: 0.45;
+    mask-image: radial-gradient(circle at 50% 20%, black 0, transparent 70%);
+  }
+
+  .hero-frame {
+    position: relative;
+    padding: 6px;
+    border-radius: 1.75rem;
+    background:
+      linear-gradient(135deg, oklch(0.32 0.03 265 / 0.6), oklch(0.24 0.03 255 / 0.55));
+    box-shadow:
+      0 18px 40px oklch(0 0 0 / 0.35),
+      0 0 20px oklch(0.32 0.03 265 / 0.35);
+  }
+
+  .hero-frame::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 1.6rem;
+    background: linear-gradient(160deg, oklch(0.22 0.02 265 / 0.7), oklch(0.18 0.02 265 / 0.9));
+  }
+
+  .hero-frame img {
+    position: relative;
+    border-radius: 1.45rem;
+  }
+
+  .hero-orbit {
+    position: absolute;
+    inset: -16%;
+    border-radius: 999px;
+    border: 1px solid oklch(0.78 0.16 250 / 0.22);
+    opacity: 0.7;
+    animation: hero-spin 24s linear infinite;
+  }
+
+  .hero-orbit--secondary {
+    inset: -30%;
+    border-color: oklch(0.72 0.18 305 / 0.22);
+    animation-duration: 36s;
+    animation-direction: reverse;
+  }
+}
+
+@keyframes hero-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(4%, -2%, 0) scale(1.08);
+  }
+}
+
+@keyframes hero-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -41,9 +41,9 @@ interface Particle {
   rotationSpeed: number;
 }
 
-const PARTICLE_COUNT = 50;
-const CONNECTION_DISTANCE = 130;
-const PARALLAX_STRENGTH = 25;
+const PARTICLE_COUNT = 72;
+const CONNECTION_DISTANCE = 150;
+const PARALLAX_STRENGTH = 30;
 
 function createParticles(w: number, h: number): Particle[] {
   const particles: Particle[] = [];
@@ -159,7 +159,7 @@ export function ParticleField() {
           if (dist < CONNECTION_DISTANCE) {
             const lineOpacity =
               (1 - dist / CONNECTION_DISTANCE) *
-              0.08 *
+              0.11 *
               Math.min(particles[i].opacity, particles[j].opacity);
 
             ctx.strokeStyle = `hsla(250, 50%, 65%, ${lineOpacity})`;
@@ -176,7 +176,7 @@ export function ParticleField() {
       particles.forEach((p) => {
         if (p.x < -50 || p.x > w + 50 || p.y < -50 || p.y > h + 50) return;
 
-        const pulse = 0.8 + 0.2 * Math.sin(elapsed * 0.0015 + p.wobblePhase);
+        const pulse = 0.75 + 0.25 * Math.sin(elapsed * 0.0015 + p.wobblePhase);
         const alpha = p.opacity * pulse;
 
         ctx.save();
