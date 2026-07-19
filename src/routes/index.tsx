@@ -30,7 +30,10 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background text-foreground antialiased">
-      <div className="pointer-events-none fixed inset-0 z-0 opacity-80">
+      <div 
+        className="pointer-events-none fixed top-0 left-0 z-0 w-full opacity-80"
+        style={{ height: "100lvh", minHeight: "100vh" }}
+      >
         <ColorBends
           colors={["#111111", "#000000", "#222222"]}
           rotation={90}
@@ -49,7 +52,10 @@ function Index() {
         />
       </div>
       {/* Subtle global ambient lighting to prevent the lower sections from being pitch black */}
-      <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/[0.03] via-background to-background" />
+      <div 
+        className="pointer-events-none fixed top-0 left-0 z-0 w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/[0.03] via-background to-background"
+        style={{ height: "100lvh", minHeight: "100vh" }}
+      />
       <div className="relative z-10">
         <Navbar />
         <main>
