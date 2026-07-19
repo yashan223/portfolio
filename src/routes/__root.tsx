@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import appCss from "../styles.css?url";
-import portfolioIcon from "../portfolio.png?url";
+import portfolioIcon from "../icon.ico?url";
 
 function NotFoundComponent() {
   return (
@@ -51,7 +51,7 @@ export const Route = createRootRoute({
     links: [
       {
         rel: "icon",
-        type: "image/png",
+        type: "image/x-icon",
         href: portfolioIcon,
       },
       {
