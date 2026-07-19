@@ -63,7 +63,7 @@ export function Contact() {
             className="pointer-events-none absolute inset-0 opacity-60"
             style={{
               background:
-                "radial-gradient(600px circle at 0% 0%, oklch(0.78 0.16 250 / 0.18), transparent 60%), radial-gradient(500px circle at 100% 100%, oklch(0.72 0.18 305 / 0.15), transparent 60%)",
+                "radial-gradient(600px circle at 0% 0%, oklch(1 0 0 / 0.05), transparent 60%), radial-gradient(500px circle at 100% 100%, oklch(1 0 0 / 0.03), transparent 60%)",
             }}
           />
 
@@ -82,9 +82,9 @@ export function Contact() {
                 <ArrowUpRight className="h-5 w-5 shrink-0 text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <div className="mt-6">
-                <Button asChild size="lg" className="rounded-full bg-primary/80 hover:bg-primary/70">
-                  <a href={`mailto:${EMAIL}`} className="text-white">
-                    <Mail className="mr-1 h-4 w-4 text-white" />
+                <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
+                  <a href={`mailto:${EMAIL}`}>
+                    <Mail className="mr-1 h-4 w-4" />
                     Send me an email
                   </a>
                 </Button>

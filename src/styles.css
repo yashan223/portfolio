@@ -78,46 +78,46 @@ html, body {
 
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.11 0.02 265);
-  --foreground: oklch(0.96 0.01 250);
-  --card: oklch(0.15 0.02 265);
-  --card-foreground: oklch(0.97 0.01 250);
-  --popover: oklch(0.15 0.02 265);
-  --popover-foreground: oklch(0.97 0.01 250);
-  --primary: oklch(0.74 0.16 248);
-  --primary-foreground: oklch(0.11 0.02 265);
-  --secondary: oklch(0.2 0.02 265);
-  --secondary-foreground: oklch(0.97 0.01 250);
-  --muted: oklch(0.18 0.02 265);
-  --muted-foreground: oklch(0.66 0.03 260);
-  --accent: oklch(0.66 0.16 305);
-  --accent-foreground: oklch(0.11 0.02 265);
-  --destructive: oklch(0.65 0.22 25);
-  --destructive-foreground: oklch(0.97 0.01 250);
+  --background: oklch(0 0 0);
+  --foreground: oklch(1 0 0);
+  --card: oklch(0.03 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.03 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(1 0 0);
+  --primary-foreground: oklch(0 0 0);
+  --secondary: oklch(0.05 0 0);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.05 0 0);
+  --muted-foreground: oklch(0.5 0 0);
+  --accent: oklch(0.08 0 0);
+  --accent-foreground: oklch(0.95 0 0);
+  --destructive: oklch(0.3 0.1 25);
+  --destructive-foreground: oklch(1 0 0);
   --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.74 0.16 248);
-  --chart-1: oklch(0.74 0.16 248);
-  --chart-2: oklch(0.66 0.16 305);
-  --chart-3: oklch(0.7 0.15 195);
-  --chart-4: oklch(0.74 0.15 145);
-  --chart-5: oklch(0.74 0.16 60);
-  --sidebar: oklch(0.13 0.02 265);
-  --sidebar-foreground: oklch(0.96 0.01 250);
-  --sidebar-primary: oklch(0.74 0.16 248);
-  --sidebar-primary-foreground: oklch(0.11 0.02 265);
-  --sidebar-accent: oklch(0.2 0.02 265);
-  --sidebar-accent-foreground: oklch(0.97 0.01 250);
+  --input: oklch(1 0 0 / 8%);
+  --ring: oklch(1 0 0 / 25%);
+  --chart-1: oklch(0.9 0 0);
+  --chart-2: oklch(0.7 0 0);
+  --chart-3: oklch(0.5 0 0);
+  --chart-4: oklch(0.3 0 0);
+  --chart-5: oklch(0.1 0 0);
+  --sidebar: oklch(0.02 0 0);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(1 0 0);
+  --sidebar-primary-foreground: oklch(0 0 0);
+  --sidebar-accent: oklch(0.05 0 0);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
   --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.74 0.16 248);
+  --sidebar-ring: oklch(1 0 0 / 25%);
 
-  --gradient-primary: linear-gradient(135deg, oklch(0.74 0.16 248), oklch(0.66 0.16 305));
-  --gradient-text: linear-gradient(135deg, oklch(0.96 0.01 250), oklch(0.74 0.16 248) 60%, oklch(0.66 0.16 305));
+  --gradient-primary: linear-gradient(135deg, oklch(0.15 0 0), oklch(0.05 0 0));
+  --gradient-text: linear-gradient(135deg, oklch(1 0 0), oklch(0.6 0 0) 60%, oklch(0.3 0 0));
 
-  --glass-bg: oklch(1 0 0 / 0.03);
-  --glass-border: oklch(1 0 0 / 0.06);
-  --shadow-glow: 0 0 80px oklch(0.74 0.16 248 / 0.22);
-  --shadow-card: 0 8px 32px oklch(0 0 0 / 0.4);
+  --glass-bg: oklch(1 0 0 / 0.01);
+  --glass-border: oklch(1 0 0 / 0.03);
+  --shadow-glow: 0 0 80px oklch(1 0 0 / 0.05);
+  --shadow-card: 0 8px 32px oklch(0 0 0 / 0.9);
 }
 
 @layer base {
@@ -148,11 +148,11 @@ html, body {
   }
 
   .hero-aurora--one {
-    background: radial-gradient(circle at 20% 20%, oklch(0.62 0.12 248 / 0.35), transparent 62%);
+    background: radial-gradient(circle at 20% 20%, oklch(0.3 0 0 / 0.1), transparent 62%);
   }
 
   .hero-aurora--two {
-    background: radial-gradient(circle at 80% 30%, oklch(0.58 0.14 305 / 0.32), transparent 64%);
+    background: radial-gradient(circle at 80% 30%, oklch(0.2 0 0 / 0.1), transparent 64%);
     animation-delay: -7s;
   }
 
@@ -160,10 +160,10 @@ html, body {
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(transparent 70%, oklch(0.62 0.12 248 / 0.08)),
-      radial-gradient(oklch(1 0 0 / 0.08) 1px, transparent 1px);
+      linear-gradient(transparent 70%, oklch(0.2 0 0 / 0.05)),
+      radial-gradient(oklch(1 0 0 / 0.03) 1px, transparent 1px);
     background-size: 100% 100%, 28px 28px;
-    opacity: 0.45;
+    opacity: 0.3;
     mask-image: radial-gradient(circle at 50% 20%, black 0, transparent 70%);
   }
 
@@ -172,10 +172,10 @@ html, body {
     padding: 6px;
     border-radius: 1.75rem;
     background:
-      linear-gradient(135deg, oklch(0.22 0.02 265 / 0.7), oklch(0.18 0.02 255 / 0.65));
+      linear-gradient(135deg, oklch(0.05 0 0 / 0.7), oklch(0.02 0 0 / 0.65));
     box-shadow:
-      0 18px 40px oklch(0 0 0 / 0.35),
-      0 0 20px oklch(0.22 0.02 265 / 0.35);
+      0 18px 40px oklch(0 0 0 / 0.8),
+      0 0 20px oklch(0.05 0 0 / 0.35);
   }
 
   .hero-frame::before {
@@ -183,7 +183,7 @@ html, body {
     position: absolute;
     inset: 1px;
     border-radius: 1.6rem;
-    background: linear-gradient(160deg, oklch(0.14 0.02 265 / 0.9), oklch(0.11 0.02 265 / 0.95));
+    background: linear-gradient(160deg, oklch(0.02 0 0 / 0.9), oklch(0.01 0 0 / 0.95));
   }
 
   .hero-frame img {
@@ -195,14 +195,14 @@ html, body {
     position: absolute;
     inset: -16%;
     border-radius: 999px;
-    border: 1px solid oklch(0.62 0.12 248 / 0.2);
+    border: 1px solid oklch(1 0 0 / 0.05);
     opacity: 0.7;
     animation: hero-spin 24s linear infinite;
   }
 
   .hero-orbit--secondary {
     inset: -30%;
-    border-color: oklch(0.58 0.14 305 / 0.2);
+    border-color: oklch(1 0 0 / 0.03);
     animation-duration: 36s;
     animation-direction: reverse;
   }

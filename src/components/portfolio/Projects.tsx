@@ -212,7 +212,7 @@ export function Projects() {
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   style={{
                     background:
-                      "radial-gradient(400px circle at 50% 0%, oklch(0.78 0.16 250 / 0.15), transparent 60%)",
+                      "radial-gradient(400px circle at 50% 0%, oklch(1 0 0 / 0.05), transparent 60%)",
                   }}
                 />
 

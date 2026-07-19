@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ParticleField } from "./ParticleField";
+
 import { SpotifyActivity } from "./SpotifyActivity";
 import profilePhotoUrl from "../../pfp/image.jpg";
 
@@ -13,7 +13,7 @@ export function Hero() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-24"
       style={{
         backgroundImage:
-          "radial-gradient(ellipse 60% 40% at 50% 0%, oklch(0.78 0.16 250 / 0.08), transparent 70%)",
+          "radial-gradient(ellipse 60% 40% at 50% 0%, oklch(1 0 0 / 0.03), transparent 70%)",
       }}
     >
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -22,7 +22,7 @@ export function Hero() {
         <div className="hero-grid" />
       </div>
 
-      <ParticleField />
+
 
       <div className="relative z-20 mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="text-center lg:text-left">
@@ -51,28 +51,28 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 flex justify-center lg:justify-start"
           >
-            <div className="inline-flex w-full max-w-[400px] flex-col overflow-hidden rounded-md border border-primary/25 bg-background/50 text-left font-mono text-xs shadow-lg backdrop-blur-xl sm:text-sm font-semibold" style={{ boxShadow: "0 0 24px oklch(0.78 0.16 250 / 0.12)" }}>
-              <div className="flex items-center gap-1.5 border-b border-primary/15 px-3 py-1.5" style={{ backgroundColor: "oklch(0.13 0.02 265)" }}>
+            <div className="inline-flex w-full max-w-[400px] flex-col overflow-hidden rounded-md border border-primary/25 bg-background/50 text-left font-mono text-xs shadow-lg backdrop-blur-xl sm:text-sm font-semibold" style={{ boxShadow: "0 0 24px oklch(1 0 0 / 0.05)" }}>
+              <div className="flex items-center gap-1.5 border-b border-primary/15 px-3 py-1.5" style={{ backgroundColor: "oklch(0.05 0 0)" }}>
                 <div className="h-2.5 w-2.5 rounded-full bg-red-500/70"></div>
                 <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/70"></div>
-                <div className="h-2.5 w-2.5 rounded-full bg-primary/70"></div>
+                <div className="h-2.5 w-2.5 rounded-full bg-green-500/70"></div>
                 <span className="ml-2 text-[10px] text-muted-foreground/60">bash</span>
               </div>
-              <div className="p-3" style={{ backgroundColor: "oklch(0.11 0.018 265)" }}>
+              <div className="p-3" style={{ backgroundColor: "oklch(0.02 0 0)" }}>
                 <div className="flex pb-1">
-                  <span className="mr-2 text-blue-400">yashan@server</span>
-                  <span className="mr-2 text-violet-400">~</span>
-                  <span style={{ color: "oklch(0.78 0.16 250)" }}>$</span>
+                  <span className="mr-2 text-zinc-400">yashan@server</span>
+                  <span className="mr-2 text-zinc-500">~</span>
+                  <span className="text-zinc-300">$</span>
                   <span className="ml-2 text-slate-300">cat current_status.txt</span>
                 </div>
                 <div className="mt-1 text-slate-400">
                   &gt;&nbsp;Deploying scalable infrastructure...
                 </div>
                 <div className="mt-2 flex">
-                  <span className="mr-2 text-blue-400">yashan@server</span>
-                  <span className="mr-2 text-violet-400">~</span>
-                  <span style={{ color: "oklch(0.78 0.16 250)" }}>$</span>
-                  <span className="ml-2 animate-pulse" style={{ color: "oklch(0.78 0.16 250)" }}>_</span>
+                  <span className="mr-2 text-zinc-400">yashan@server</span>
+                  <span className="mr-2 text-zinc-500">~</span>
+                  <span className="text-zinc-300">$</span>
+                  <span className="ml-2 animate-pulse text-zinc-300">_</span>
                 </div>
               </div>
             </div>
@@ -87,21 +87,21 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="group rounded-full bg-primary/65 text-white hover:bg-primary/55"
+              className="group rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
             >
               <a href="#projects">
                 View Projects
-                <ArrowRight className="ml-1 h-4 w-4 text-white transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full border-primary/40 bg-primary/20 text-white hover:bg-primary/30 hover:text-white"
+              className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white"
             >
               <a href="https://www.linkedin.com/in/yashan-perera/" target="_blank" rel="noreferrer">
-                <Linkedin className="mr-1 h-4 w-4 text-white" />
+                <Linkedin className="mr-1 h-4 w-4" />
                 LinkedIn Profile
               </a>
             </Button>
@@ -109,10 +109,10 @@ export function Hero() {
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full border-primary/40 bg-primary/20 text-white hover:bg-primary/30 hover:text-white"
+              className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white"
             >
               <a href="https://github.com/yashan223" target="_blank" rel="noreferrer">
-                <Github className="mr-1 h-4 w-4 text-white" />
+                <Github className="mr-1 h-4 w-4" />
                 GitHub Profile
               </a>
             </Button>
