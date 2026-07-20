@@ -1,12 +1,14 @@
+import React, { Suspense } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
-import { About } from "@/components/portfolio/About";
-import { Projects } from "@/components/portfolio/Projects";
-import { Skills } from "@/components/portfolio/Skills";
-import { Contact } from "@/components/portfolio/Contact";
-import { Footer } from "@/components/portfolio/Footer";
-import ColorBends from "@/components/portfolio/ColorBends";
+
+const ColorBends = React.lazy(() => import("@/components/portfolio/ColorBends"));
+const About = React.lazy(() => import("@/components/portfolio/About").then((m) => ({ default: m.About })));
+const Projects = React.lazy(() => import("@/components/portfolio/Projects").then((m) => ({ default: m.Projects })));
+const Skills = React.lazy(() => import("@/components/portfolio/Skills").then((m) => ({ default: m.Skills })));
+const Contact = React.lazy(() => import("@/components/portfolio/Contact").then((m) => ({ default: m.Contact })));
+const Footer = React.lazy(() => import("@/components/portfolio/Footer").then((m) => ({ default: m.Footer })));
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,22 +36,24 @@ function Index() {
         className="pointer-events-none fixed top-0 left-0 z-0 w-full opacity-80"
         style={{ height: "100lvh", minHeight: "100vh" }}
       >
-        <ColorBends
-          colors={["#111111", "#000000", "#222222"]}
-          rotation={90}
-          speed={0.2}
-          scale={1}
-          frequency={1}
-          warpStrength={1}
-          mouseInfluence={1}
-          noise={0.15}
-          parallax={0.5}
-          iterations={1}
-          intensity={1.5}
-          bandWidth={6}
-          transparent
-          autoRotate={0}
-        />
+        <Suspense fallback={null}>
+          <ColorBends
+            colors={["#111111", "#000000", "#222222"]}
+            rotation={90}
+            speed={0.2}
+            scale={1}
+            frequency={1}
+            warpStrength={1}
+            mouseInfluence={1}
+            noise={0.15}
+            parallax={0.5}
+            iterations={1}
+            intensity={1.5}
+            bandWidth={6}
+            transparent
+            autoRotate={0}
+          />
+        </Suspense>
       </div>
       {/* Subtle global ambient lighting to prevent the lower sections from being pitch black */}
       <div 
@@ -60,12 +64,16 @@ function Index() {
         <Navbar />
         <main>
           <Hero />
-          <About />
-          <Projects />
-          <Skills />
-          <Contact />
+          <Suspense fallback={<div className="min-h-screen" />}>
+            <About />
+            <Projects />
+            <Skills />
+            <Contact />
+          </Suspense>
         </main>
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </div>
     </div>
   );
