@@ -50,6 +50,7 @@ export function Projects() {
   const [error, setError] = useState<string | null>(null);
   const [language, setLanguage] = useState<string>("all");
   const [sort, setSort] = useState<SortKey>("latest");
+  const [showAllRepos, setShowAllRepos] = useState(false);
 
   useEffect(() => {
     const ctrl = new AbortController();
@@ -81,13 +82,24 @@ export function Projects() {
 
   const filtered = useMemo(() => {
     let list = repos;
+    if (!showAllRepos) {
+      const PINNED_REPOS = [
+        "xona-pos",
+        "todayevents",
+        "media-server-stack",
+        "guid-blocker",
+        "game-log-server",
+        "mail-server-stack",
+      ];
+      list = list.filter((r) => PINNED_REPOS.includes(r.name));
+    }
     if (language !== "all") list = list.filter((r) => r.language === language);
     list = [...list].sort((a, b) => {
       if (sort === "stars") return b.stargazers_count - a.stargazers_count;
       return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
     });
     return list;
-  }, [repos, language, sort]);
+  }, [repos, language, sort, showAllRepos]);
 
   return (
     <section id="projects" className="relative px-4 py-24">
@@ -119,6 +131,13 @@ export function Projects() {
           </div>
 
           <div className="flex flex-wrap gap-3">
+            <Button
+              variant="outline"
+              onClick={() => setShowAllRepos((prev) => !prev)}
+              className="rounded-full border-white/10 bg-white/[0.03] backdrop-blur hover:bg-white/[0.08]"
+            >
+              {showAllRepos ? "Show Pinned Repos" : "Show All Repos"}
+            </Button>
             <Select value={language} onValueChange={setLanguage}>
               <SelectTrigger className="w-[160px] rounded-full border-white/10 bg-white/[0.03] backdrop-blur">
                 <SelectValue placeholder="Language" />
