@@ -65,8 +65,8 @@ function Index() {
         <main>
           <Hero />
           <Suspense fallback={<div className="min-h-screen" />}>
-            <About />
             <Projects />
+            <About />
             <Skills />
             <Contact />
           </Suspense>
