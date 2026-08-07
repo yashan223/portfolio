@@ -1,4 +1,4 @@
-# Yashan's Dev Portfolio
+# Yashan's Portfolio
 
 Simple portfolio site built with React and Vite.
 
