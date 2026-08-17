@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { SpotifyActivity } from "./SpotifyActivity";
@@ -55,12 +55,12 @@ export function Hero() {
             Building scalable infrastructure, automating CI/CD workflows, and managing Linux environments while mastering cloud-native architecture. Dedicated to creating reliable server deployments and automated systems.
           </motion.p>
 
-          {/* Action CTA Buttons (Visible on Desktop, hidden on Mobile) */}
+          {/* Action CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8 hidden lg:flex flex-wrap items-center gap-3.5 lg:justify-start"
+            className="mt-8 flex flex-wrap items-center justify-center gap-3.5 lg:justify-start"
           >
             <Button
               asChild
@@ -70,6 +70,23 @@ export function Hero() {
               <a href="#projects">
                 View Projects
                 <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
+            </Button>
+
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="group rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white px-6"
+            >
+              <a
+                href="/YashanPereraCV.pdf"
+                download="YashanPereraCV.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Download className="mr-1.5 h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
+                Download CV
               </a>
             </Button>
 
