@@ -52,7 +52,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg lg:mx-0 leading-relaxed"
           >
-            Building scalable infrastructure, automating CI/CD workflows, and managing Linux environments while mastering cloud-native architecture. Dedicated to creating reliable server deployments and automated systems.
+            Motivated and hardworking individual with a positive attitude and a willingness to learn. I am a responsible and adaptable person who enjoys working with others and developing new skills. I am eager to gain experience and contribute positively to a professional team.
           </motion.p>
 
           {/* Action CTA Buttons */}
