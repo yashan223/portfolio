@@ -4,7 +4,6 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 
 const ColorBends = React.lazy(() => import("@/components/portfolio/ColorBends"));
-const About = React.lazy(() => import("@/components/portfolio/About").then((m) => ({ default: m.About })));
 const Projects = React.lazy(() => import("@/components/portfolio/Projects").then((m) => ({ default: m.Projects })));
 const Skills = React.lazy(() => import("@/components/portfolio/Skills").then((m) => ({ default: m.Skills })));
 const Contact = React.lazy(() => import("@/components/portfolio/Contact").then((m) => ({ default: m.Contact })));
@@ -66,7 +65,6 @@ function Index() {
           <Hero />
           <Suspense fallback={<div className="min-h-screen" />}>
             <Projects />
-            <About />
             <Skills />
             <Contact />
           </Suspense>
