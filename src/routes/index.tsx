@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Yashan Perera -DevOps Engineer" },
       {
         property: "og:description",
-        content: "Student on the path to DevOps. Projects, skills, and learning journey.",
+        content: "Student on the path to becoming a DevOps engineer, sharing projects, skills, and learning progress.",
       },
     ],
   }),
